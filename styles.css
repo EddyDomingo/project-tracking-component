@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+
+/*=================
+Table of Contents
+1. Global Variables
+2. Global Styles
+3. Layout
+4. Components
+5. Typography
+6. Media Queries
+===================*/
+
+/*==============
+1. Global Variables
+================*/
+
+:root{
+    /* Colors */
+    --redish: #FF5F5E;
+    --darkRedish: #BC4747;
+    --darkBlue: #242942;
+    --lightGrey: #c8cbce;
+    --offWhite: #f7f7f7;
+
+    /* font */
+    --fontfamily: 'Barlow Condensed', sans-serif;
+
+    /* weigts */
+    --boldWeight: 700;
+    --regularWeight: 400;
+
+    /* display */
+    --tabletHeight: 812px;
+    --tableWidth: 360px;
+
+
+}
+
+/*==============
+2. Global Styles
+================*/
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--offWhite);
+    font-family: var(--fontfamily);
+}
+
+/*==============
+3. Layout
+================*/
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+.top-container{
+    display: relative;
+    height:calc(var(--tabletHeight) - 406px);
+    
+}
+.bottom-container{
+    display: relative;
+    height:calc(var(--tabletHeight) - 406px);
+    
+}
+
+.top-greyBox{
+    position: absolute;
+    width: 380px;
+    height: calc(var(--tabletHeight) - 406px);
+    background-color: var(--lightGrey);
+    margin-left: 180px;
+    border-radius: 0px 0px 0px 50px;
+    
+}
+
+/*==============
+4. Components
+================*/
+
+img{
+    position: absolute;
+    width: 25px;
+    margin-top: 40px;
+    margin-left: 25px;
+}
+
+.hamburger{
+    margin-left: 120px;
+}
+
+.img-devices{
+    position: absolute;
+    width: 575px;
+    margin-top: 90px;
+    margin-left: -8px;
+    
+
+}
+
+article{
+    width: 40px;
+    height: 20px;
+    border-radius: 25px;
+    background-color: var(--darkBlue);
+    text-align: center;
+    color: var(--offWhite);
+    margin-left: 20px;
+}
+
+nav{
+    width: 300px;
+    height: 230px;
+    background-color: var(--offWhite);
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 80px;
+    margin-left: -165px;
+    position: absolute;
+    z-index: 1;
+    line-height: 55px;
+    font-size: 18px;
+}
+
+a{
+    text-decoration: none;
+    font-style: var(--fontfamily);
+    color: var(--darkBlue);
+    font-weight: var(--boldWeight);
+    text-transform: uppercase;
+    display: block;
+}
+
+nav
+{
+    visibility: hidden;
+}
+hr{
+    background-color: var(--lightGrey);
+    position: relative;
+    width: 270px;
+    margin-left: 13px;
+    
+}
+
+
+/*==============
+5. Typography
+================*/
+
+h3,
+h1,
+article,
+input{ 
+    text-transform: uppercase;
+    margin-top: 25px;
+}
+article, h3{
+    font-size: 15px;
+    font-weight: var(--regularWeight);
+    display: inline-block;
+}
+h3{
+    margin-left: 20px;
+    letter-spacing: 4px;
+    color: var(--darkBlue);
+}
+h1{
+    font-size: 40px;
+    font-weight: var(--boldWeight);
+    margin-left: 30px;
+    color: var(--darkBlue);
+    margin-top: 10px;
+}
+h2{
+    margin-left: 30px;
+    font-size: 22px;
+    font-weight: var(--regularWeight);
+    width: 270px;
+    color: var(--darkBlue);
+}
+input{
+    width: 120px;
+    height: 30px;
+    border: 0px;
+    font-size: 14px;
+    font-family: var(--fontfamily);
+    border-radius: 5px;
+    margin-left: 30px;
+    background-color: var(--redish);
+    color: var(--offWhite);
+}
+.login{
+    color:var(--lightGrey);
+}
+
