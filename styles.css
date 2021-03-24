@@ -31,8 +31,9 @@ Table of Contents
     --regularWeight: 400;
 
     /* display */
-    --tabletHeight: 812px;
-    --tableWidth: 360px;
+    --phonetHeight: 812px;
+    --phoneWidth: 360px;
+    --desktopWidth: 1200px;
 
 
 }
@@ -64,19 +65,19 @@ body{
 
 .top-container{
     display: relative;
-    height:calc(var(--tabletHeight) - 406px);
+    height:calc(var(--phonetHeight) - 406px);
     
 }
 .bottom-container{
     display: relative;
-    height:calc(var(--tabletHeight) - 406px);
+    height:calc(var(--phonetHeight) - 406px);
     
 }
 
 .top-greyBox{
     position: absolute;
     width: 380px;
-    height: calc(var(--tabletHeight) - 406px);
+    height: calc(var(--phonetHeight) - 406px);
     background-color: var(--lightGrey);
     margin-left: 180px;
     border-radius: 0px 0px 0px 50px;
@@ -203,3 +204,94 @@ input{
     color:var(--lightGrey);
 }
 
+/*==============
+6. Media Queries
+================*/
+
+@media screen and (min-width: 1200px) {
+    .main-container{ 
+        display: flex;
+        flex-direction: row-reverse;
+        margin-right: 5px;
+    }
+    .top-container{
+        width:800px;
+        height: 800px;
+        
+        
+    }
+    .top-greyBox{
+        width: 830px;
+        height: 375px;
+        margin-left: -20px;
+    }
+    .img-devices{
+        width: 1200px;
+        margin-top: 250px;
+        margin-left: 10px;
+    }
+
+    .hamburger{
+        visibility: hidden;
+    }
+    .bottom-container{
+        height:800px;
+        width:500px;
+        margin-top: 250px;
+        margin-right: 500px;  
+    }
+    h1{
+        font-size: 64px;
+    }
+    h3{
+        margin-left: 20px;
+        font-size: 20px;
+    }
+    input{
+        width: 140px;
+        height: 50px;
+        font-size: 18px;
+    }
+    .logo{
+        margin-left: -975px;
+        width:40px;
+    }
+
+    nav{
+        visibility: visible;
+        width: 600px;
+        height: 130px;
+        margin-top: 30px;
+        margin-left: 15px;
+        position: absolute;
+        z-index: 1;
+        line-height: 0px;
+        font-size: 18px;
+        background-color: var(--lightGrey);
+    }
+    hr{
+        visibility: hidden;
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
+    a{
+        display: inline;
+        margin-left: 30px;
+        font-size: 26px;
+        
+    }
+    .login{
+        color:var(--darkBlue);
+        margin-left: 550px;
+          
+    }
+
+    a:hover{
+        cursor: pointer;
+        text-decoration: underline;
+
+    }
+
+
+}
